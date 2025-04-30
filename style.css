@@ -1,0 +1,63 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Segoe UI', sans-serif; color: #fff; background: #fff; }
+.container { width: 90%; max-width: 1200px; margin: 0 auto; }
+a { text-decoration: none; }
+
+/* Navbar */
+.navbar { position: fixed; top: 0; width: 100%; display: flex; align-items: center; padding: 1rem 0; z-index: 100; background: transparent; }
+.navbar .container { display: flex; justify-content: space-between; align-items: center; }
+.logo { font-size: 1.5rem; font-weight: bold; color: #fff; }
+
+.menu ul { list-style: none; display: flex; gap: 2rem; }
+.menu a { color: #fff; font-weight: 500; position: relative; transition: all 0.3s ease; }
+.menu a::after { content: ''; position: absolute; width: 0; height: 2px; bottom: -5px; left: 0; background: #0066FF; transition: width 0.3s ease; }
+.menu a:hover::after, .menu a.active::after { width: 100%; }
+.menu a.active { color: #ff0202; }
+
+.menu .btn { padding: 0.5rem 1rem; border-radius: 4px; background: #0066FF; transition: all 0.3s ease; }
+.menu .btn:hover { background: #1a01f8; }
+
+/* Hero */
+.hero { position: relative; height: 90vh; background: url('img/phpCode.png') center/cover no-repeat; }
+.hero .overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); }
+.hero-content { position: relative; top: 30%; color: #fff; }
+.hero-content h1 { font-size: 3rem; line-height: 1.2; }
+.hero-content p { margin: 1rem 0; font-size: 1.1rem; }
+.hero-buttons .btn { margin-right: 1rem; padding: 0.75rem 1.5rem; border-radius: 4px; font-weight: 500; transition: all 0.3s ease; }
+.btn.primary:hover { background: #ffffff; }
+.btn.secondary { background: transparent; border: 2px solid #fff; color: #fff; }
+.btn.secondary:hover { background: #fff; color: #0011ff; }
+
+/* Secciones */
+.seccion { padding: 6rem 0; }
+.nosotros { display: flex; align-items: center; gap: 2rem; color: #222; background: #f7f7f7; }
+.nosotros .texto-nosotros { flex: 1; }
+.nosotros h2 { font-size: 2rem; margin-bottom: 1rem; }
+.nosotros p { margin-bottom: 2rem; color: #555; }
+.nosotros .stats { list-style: none; display: flex; flex-direction: column; gap: 1rem; }
+.nosotros .stats .icon { margin-right: 0.5rem; }
+.imagen-nosotros img { width: 100%; border-radius: 8px; }
+
+/* Flowy */
+.flowy { background: #0B2060; color: #fff; }
+.flowy .container { display: flex; align-items: center; gap: 2rem; }
+.flowy-imagen img { width: 100%; max-width: 350px; }
+.flowy-texto h2 { font-size: 2rem; margin-bottom: 1rem; }
+.flowy-texto p { margin-bottom: 1rem; }
+.flowy-texto .nota { font-style: italic; opacity: 0.8; }
+.flowy-caracteristicas { display: flex; gap: 1rem; margin-top: 2rem; }
+.card { padding: 1rem 1.5rem; background: rgba(255,255,255,0.1); border-radius: 6px; text-align: center; }
+
+/* Contacto */
+.contacto { background: #0066FF; }
+.contacto .container { text-align: center; }
+.contacto h2 { font-size: 2rem; margin-bottom: 1rem; }
+.contacto p { max-width: 600px; margin: 0 auto 2rem; }
+.contact-cards { display: grid; grid-template-columns: repeat(auto-fit,minmax(250px,1fr)); gap: 1rem; }
+.contact-cards .card.info { background: rgba(255,255,255,0.1); padding: 1rem; border-radius: 6px; }
+
+/* Footer */
+.footer { background: #000000; padding: 2rem 0; }
+.footer .container { display: flex; justify-content: space-between; align-items: center; color: #888; }
+.logo-footer { font-weight: bold; color: #fff; }
+.politica { color: #888; }
