@@ -64,6 +64,34 @@ a { text-decoration: none; }
 .logo-footer { font-weight: bold; color: #fff; }
 .politica { color: #888; }
 
+
+img { 
+    max-width: 100%;
+    height: auto;
+}
+
+
+ /*contenedor flexible*/
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/*menu de navegacion adaptable*/
+.navbar .menu ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+
+
 /* Media Queries */
 @media (max-width: 768px) {
   .menu-toggle { display: block; }
