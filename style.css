@@ -1,3 +1,4 @@
+/* General reset y base */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body { font-family: 'Segoe UI', sans-serif; color: #fff; background: #fff; }
 .container { width: 90%; max-width: 1200px; margin: 0 auto; }
@@ -7,6 +8,7 @@ a { text-decoration: none; }
 .navbar { position: fixed; top: 0; width: 100%; display: flex; align-items: center; padding: 1rem 0; z-index: 100; background: transparent; }
 .navbar .container { display: flex; justify-content: space-between; align-items: center; }
 .logo { font-size: 1.5rem; font-weight: bold; color: #fff; }
+.menu-toggle { display: none; font-size: 2rem; color: #fff; cursor: pointer; }
 
 .menu ul { list-style: none; display: flex; gap: 2rem; }
 .menu a { color: #fff; font-weight: 500; position: relative; transition: all 0.3s ease; }
@@ -61,3 +63,22 @@ a { text-decoration: none; }
 .footer .container { display: flex; justify-content: space-between; align-items: center; color: #888; }
 .logo-footer { font-weight: bold; color: #fff; }
 .politica { color: #888; }
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .menu-toggle { display: block; }
+  .menu ul {
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: #000;
+    width: 100%;
+    display: none;
+    padding: 1rem;
+  }
+  .menu ul.show { display: flex; }
+  .hero-content h1 { font-size: 2rem; }
+  .flowy .container, .nosotros { flex-direction: column; }
+  .footer .container { flex-direction: column; text-align: center; }
+}
